@@ -24,18 +24,20 @@ CONFIG += c++11
 
 SOURCES += \
         main.cpp \
-        startupwindow.cpp
+        startupwindow.cpp \
+    gamewindow.cpp
 
 HEADERS += \
-        startupwindow.h
+        startupwindow.h \
+    gamewindow.h
 
 FORMS += \
-        startupwindow.ui
+        startupwindow.ui \
+    gamewindow.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
-DISTFILES += \
-    README.md
+DISTFILES +=
