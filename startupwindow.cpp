@@ -9,7 +9,8 @@ StartupWindow::StartupWindow(QWidget *parent) :
     ui->setupUi(this);
     gw = new gameWindow();                                              //создает объект второго класса
 
-    connect(this,SIGNAL(gwWindowControl()),gw,SLOT(gwWindowControl())); //коннект перехода от первой формы ко второй
+
+    connect(this,SIGNAL(gwWindowControl(bool*, bool*, bool*, bool*, bool*, bool*, bool*, bool*, short int*, unsigned short int, unsigned short int, unsigned short int*)),gw,SLOT(gwWindowControl(bool*, bool*, bool*, bool*, bool*, bool*, bool*, bool*, short int*, unsigned short int, unsigned short int, unsigned short int*)));
     connect(gw,SIGNAL(swWindowControl()),this,SLOT(swWindowControl()));
 }
 
@@ -20,7 +21,8 @@ StartupWindow::~StartupWindow()
 
 void StartupWindow::on_goButton_clicked()   //1)при клике
 {
-        emit gwWindowControl();                 //3)сигнал gwWindowControl
+
+        emit gwWindowControl(&add, &sub, &mul, &div, &pow, &sqr, &sqE, &lnE, &mode, seconds, mistakes, &chars); //3)сигнал gwWindowControl
         this->close();                          //2)окно закрывается
 }
 

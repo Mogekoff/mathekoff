@@ -16,7 +16,7 @@ public:
     explicit StartupWindow(QWidget *parent = nullptr);
     ~StartupWindow();
 signals:
-    void gwWindowControl();         //сигнал для перехода на вторую форму
+    void gwWindowControl(bool *add, bool *sub, bool *mul, bool *div, bool *pow, bool *sqr, bool *sqE, bool *lnE, short int *mode, unsigned short int seconds, unsigned short int mistakes, unsigned short int *chars); //сигнал для перехода на вторую форму
 private slots:
     void on_goButton_clicked();
     void swWindowControl();
@@ -32,9 +32,9 @@ private:
     bool sqE = false;
     bool lnE = false;
     short int mode = 0;
-    unsigned int seconds = 5;
-    unsigned int mistakes = 1;
-    unsigned int chars = 1;
+    unsigned short int seconds = 5;
+    unsigned short int mistakes = 1;
+    unsigned short int chars = 1;
 };
 
 #endif // STARTUPWINDOW_H
