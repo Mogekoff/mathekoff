@@ -14,13 +14,15 @@ class gameWindow : public QWizardPage
 public:
     explicit gameWindow(QWidget *parent = nullptr);
     ~gameWindow();
-
+signals:
+    void swWindowControl();
 private slots:
-    void on_gameWindow_destroyed();
     void gwWindowControl();         //слот для аналогичного сигнала из sw
+
 private:
     Ui::gameWindow *ui;
-
+    void closeEvent(QCloseEvent *event);
+    void keyPressEvent (QKeyEvent * event);
 };
 
 #endif // GAMEWINDOW_H

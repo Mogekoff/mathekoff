@@ -69,6 +69,9 @@
      <property name="text">
       <string>Mistakes</string>
      </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
     </widget>
     <widget class="QRadioButton" name="isTimeRadio">
      <property name="geometry">
@@ -159,6 +162,9 @@
      </property>
      <property name="text">
       <string>Addition</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
      </property>
     </widget>
     <widget class="QCheckBox" name="sqrButton">
