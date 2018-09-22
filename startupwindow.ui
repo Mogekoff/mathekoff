@@ -167,7 +167,7 @@
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QCheckBox" name="sqrButton">
+    <widget class="QCheckBox" name="sqrBox">
      <property name="geometry">
       <rect>
        <x>10</x>
